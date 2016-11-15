@@ -21,6 +21,9 @@ module.exports = (kibana) => {
   return new kibana.Plugin({
     require: ['elasticsearch'],
     config : config,
+    uiExports: {
+      chromeNavControls: ['plugins/fts-keystone/logout/logout']
+    },
     init   : init
   });
 

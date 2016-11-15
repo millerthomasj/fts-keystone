@@ -81,6 +81,12 @@ module.exports = function (server) {
       }
     }
 
+    const logout = function (request, reply) {
+        request.auth.session.clear();
+        return reply.redirect('/');
+    };
+  };
+
   };
 };
 
